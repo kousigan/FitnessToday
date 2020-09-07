@@ -1,0 +1,142 @@
+.container.wrapper .aside {
+  max-width: 300px;
+  border-right: 1px solid #e7e7e7;
+  height: 100%;
+}
+
+.container-fluid.page {
+  justify-content: center;
+  display: -ms-flexbox;
+  display: flex;
+  height: 150px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.container.wrapper {
+  height: calc( 100vh - 150px );
+}
+
+.container.wrapper > .row {
+  height: 100%;
+}
+
+.col.profileContainer {
+  margin-top: 50px;
+}
+
+.aside .profileName {
+  margin-top: 50px;
+  width: 200px;
+}
+
+.col.mainContainer {
+  margin-top: 60px;
+  padding: 0 50px;
+}
+
+.profileImage {
+  background: #efefef;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.profileImage img {
+  object-fit: contain;
+  width: 200px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+}
+
+.card.minimal .card-body {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.user-card {
+  margin-top: 40px;
+}
+
+.container.wrapper .row.cardsContainer {
+  height: auto;
+}
+
+.user-card:hover .card.minimal {
+  border-color: #45a7c1;
+  box-shadow: 8px 8px 0 rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in;
+}
+
+.user-card:hover .card.minimal .card-title {
+  color: #45a7c1;
+}
+
+.user-card:hover .card.minimal .completion {
+  background: #45a7c1;
+}
+
+.la {
+  font-size: 28px;
+}
+
+.choosePlan .la {
+  position: relative;
+  top: -1px;
+}
+
+.add.choosePlan .la.la-toggle-on {
+  display: none;
+}
+
+.lName, .planName {
+  margin-right: auto;
+}
+
+.lInc {
+  width: 40px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.lName {
+  padding-left: 10px;
+}
+
+.planName {
+  padding-left: 10px;
+}
+
+.status i {
+  display: none;
+}
+
+.status.complete i:last-child {
+  display: block;
+}
+
+.status.inprogress i:first-child {
+  display: block;
+}
+
+.count {
+  width: 50px;
+  padding: 0 10px 0 0;
+  text-align: center;
+}
+
+.tmetric {
+  text-align: right;
+  padding-right: 10px;
+}
+
+@media (min-width:1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1300px;
+  }
+}
+

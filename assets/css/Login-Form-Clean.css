@@ -1,0 +1,144 @@
+.login-clean {
+  background: #f1f7fc;
+  padding: 80px 0;
+  height: 100vh;
+}
+
+.login-clean form {
+  max-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 4px;
+  color: #505e6c;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+
+.login-clean .illustration {
+  text-align: center;
+  padding: 0 0 20px;
+  font-size: 100px;
+  color: rgb(244,71,107);
+}
+
+.login-clean form .form-control {
+  background: #f7f9fc;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+}
+
+.login-clean form .btn-primary {
+  background: #f4476b;
+  border: none;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  outline: none !important;
+}
+
+.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
+  background: #eb3b60;
+}
+
+.login-clean form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean form .forgot:hover, .login-clean form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.illustration img {
+  width: 100%;
+}
+
+.completion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: #3c3c3c;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+.card.minimal {
+  border-radius: 20px;
+  box-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+  border: 2px solid #fff;
+  background: #fafafa;
+}
+
+.col.completionBlock {
+  width: 240px;
+}
+
+#comlpetionValue {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #41a8bf;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 68px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+#comlpetionValue:after {
+  content: '%';
+  padding-left: 5px;
+}
+
+.col.actions {
+  margin-top: 30px;
+}
+
+.back {
+  margin-left: -8px;
+  color: #3c3c3c;
+}
+
+.list-group-item {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  padding-right: 0;
+  border: 0 !important;
+}
+
+#choosePlan.add .la.la-check-circle-o {
+  display: none;
+}
+
+#choosePlan.added .la.la-circle {
+  display: none;
+}
+
+.added.choosePlan .la.la-toggle-off {
+  display: none;
+}
+

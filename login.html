@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FitnessToday</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <div class="login-clean">
+        <form method="post">
+            <h2 class="sr-only">Login Form</h2>
+            <div class="illustration"><img src="assets/img/Logo.png"></div>
+            <div class="form-group"><input class="form-control" type="tel" id="phoneNumber" placeholder="Phone" name="phone"></div>
+            <div class="form-group"><input class="form-control" type="text" id="code" onclick="submitPhoneNumberAuth()"></div>
+            <div class="form-group"><button class="btn btn-primary btn-block" id="confirm-code" onclick="submitPhoneNumberAuth()">Sign in with phone number</button><button class="btn btn-primary btn-block" id="confirm-code" onclick="submitPhoneNumberAuthCode()">Enter code</button></div>
+        </form>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/ZfireStore.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FitnessToday</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+</head>
+
+<body style="font-family: 'Noto Sans', sans-serif;">
+    <div class="container-fluid page">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href="index.html">Fitness Today</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" role="presentation" style="align-items: center;display: flex;"><span id="showDate"></span></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="la la-user"></i></a>
+                            <div class="dropdown-menu text-left" role="menu"><a class="dropdown-item" role="presentation" href="#">Profile</a><a class="dropdown-item" role="presentation" href="#">Logout</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container wrapper">
+            <div class="row">
+                <div class="col aside">
+                    <h1 id="profileName" class="profileName" style="font-weight: bold;"></h1>
+                    <div class="profileImage"><img class="profile" src="assets/img/businessman-profile-cartoon_18591-58479.jpg"></div>
+                </div>
+                <div class="col main">
+                    <div class="row">
+                        <div class="col mainContainer">
+                            <h3>Today's accomplishment</h3>
+                            <div class="row">
+                                <div class="col completionBlock"><span id="comlpetionValue">0</span></div>
+                                <div class="col">
+                                    <ul class="list-group todayPlanContainer">
+                                        <li class="list-group-item hidden"><span class="status inprogress"><i class="la la-ellipsis-h"></i><i class="la la-thumbs-up"></i></span><span class="planName">Name</span><span>Metric</span><span class="count"><span>1</span>/<span>2</span></span>
+                                            <div
+                                                class="btn-group" role="group"><button class="btn btn-light" type="button"><i class="la la-minus"></i></button><button class="btn btn-light" type="button"><i class="la la-plus"></i></button></div>
+                                </li>
+                                <li class="list-group-item hidden"><span class="status complete"><i class="la la-ellipsis-h"></i><i class="la la-thumbs-up"></i></span><span class="planName">Name</span><span>Metric</span><span class="count"><span>1</span>/<span>2</span></span>
+                                    <div class="btn-group"
+                                        role="group"><button class="btn btn-light" type="button"><i class="la la-minus"></i></button><button class="btn btn-light" type="button"><i class="la la-plus"></i></button></div>
+                                </li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col actions"><button class="btn btn-secondary btn-block" id="updatePlan" type="button">Create / Update plan</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/ZfireStore.js"></script>
+</body>
+
+</html>
