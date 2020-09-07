@@ -163,7 +163,7 @@ $(document).ready(function(){
   let arr = window.location.search.split('=');
     let path = window.location.pathname;
     
-    // console.log( arr[1],window.location.pathname)
+    console.log( arr[1],window.location.pathname)
 
     if(path=="/FitnessToday/update.html"){
           UpdatePlan(arr[1]);
