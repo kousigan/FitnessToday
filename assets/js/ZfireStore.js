@@ -165,15 +165,15 @@ $(document).ready(function(){
     
     // console.log( arr[1],window.location.pathname)
 
-    if(path=="/update.html"){
+    if(path=="/FitnessToday/update.html"){
           UpdatePlan(arr[1]);
     }
 
-    if(path=="/user.html"){
+    if(path=="/FitnessToday/user.html"){
           GetUserData(arr[1]);
     }
 
-    if(path=="/index.html"){
+    if(path=="/FitnessToday/index.html"){
              CreateCards();
      }
 })
