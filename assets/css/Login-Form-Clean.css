@@ -142,3 +142,7 @@
   display: none;
 }
 
+.completion:after {
+  content: "%";
+}
+

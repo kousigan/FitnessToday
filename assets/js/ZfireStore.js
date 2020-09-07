@@ -57,7 +57,7 @@ function GetUserData(uId){
      db.collection('users').doc(loggedId)
         .collection('userData').doc('planList')
          .collection('planDetails').get().then(querySnapshot=>{
-            querySnapshot.forEach(list_=>{
+            querySnapshot.forEach(list_=>{ 
                TodayList(list_);
                 
             })
@@ -96,7 +96,7 @@ function UpdatePlan(uId){
      db.collection("users").doc(uId).get().then((querySnapshot) => {
         var userDetails = querySnapshot.data()
         document.getElementById('profileName').innerHTML= userDetails.first+' '+userDetails.last;
-          document.getElementById('comlpetionValue').innerHTML = userDetails.completion;
+          
          let temp = db.collection("users").doc(uId).collection("userData");
            
          temp.get().then(querySnapshot => {
@@ -122,6 +122,8 @@ function UpdatePlan(uId){
 //_______________________ create plan
 
 function CreateNewPlan(p,l,m,inc){
+     
+    
      db.collection('users').doc(loggedId)
         .collection('userData').doc('planList')
          .collection('planDetails').add({
@@ -139,7 +141,7 @@ function CreateNewPlan(p,l,m,inc){
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
-  
+   
 }
 
 
