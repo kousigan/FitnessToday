@@ -361,21 +361,21 @@ $(document).ready(function(){
     // console.log( arr[1],window.location.pathname)
 
     if(path=="/FitnessToday/update.html"){
-//           UpdatePlan(arr[1]);
+          UpdatePlan(arr[1]);
     }
 
     if(path=="/FitnessToday/user.html"){
-//           GetUserData(arr[1],FTuser[0]);
+          GetUserData(arr[1],FTuser[0]);
     }
 
     if(path=="/FitnessToday/index.html"){
-//              CreateCards();
+             CreateCards();
 //         console.log('checking status..');
         // signedInDetails();
      }
     
     if(path=="/FitnessToday/profile.html"){
-//         GetProfileDetails();
+        GetProfileDetails();
     }
     
    
