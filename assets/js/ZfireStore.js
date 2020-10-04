@@ -134,6 +134,7 @@ function CreateCards(){
         CreateLiveCard(doc);
         applyRedirect();
         });
+        break;
     });
 }
 //____________________________________ get User data
@@ -391,7 +392,7 @@ $(document).ready(function(){
         case '/FitnessToday/index.html':
             console.log('Index page');
              CreateCards();
-            break;
+            
         case '/FitnessToday/user.html':
             console.log('User page');
             GetUserData(arr[1],FTuser[0]);
