@@ -348,9 +348,11 @@ $(document).ready(function(){
         FTuser = temp.split(',');
         pageVerification(FTuser,path);
     }
-    if(FTuser==null||undefined&&path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
+    if(FTuser==null||undefined){
         console.log('nothing here');
-        window.open('/FitnessToday/login.html','_self')
+        if(path!=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
+            window.open('/FitnessToday/login.html','_self')
+        }
     }
     // console.log( arr[1],window.location.pathname)
 
