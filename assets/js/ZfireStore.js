@@ -340,7 +340,7 @@ $(document).ready(function(){
     let path = window.location.pathname;
     console.log(path);
     if(path=="/FitnessToday/"){
-        window.open('FitnessToday/index.html','_self');
+        window.open('/index.html','_self');
     }
     let temp = localStorage.getItem('FTuser');
     let FTuser;
@@ -363,11 +363,11 @@ $(document).ready(function(){
           UpdatePlan(arr[1]);
     }
 
-    if(path=="FitnessToday/user.html"){
+    if(path=="/FitnessToday/user.html"){
           GetUserData(arr[1],FTuser[0]);
     }
 
-    if(path=="FitnessToday/index.html"){
+    if(path=="/FitnessToday/index.html"){
              CreateCards();
         console.log('checking status..');
         // signedInDetails();
