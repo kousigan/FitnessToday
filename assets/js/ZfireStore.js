@@ -381,4 +381,19 @@ $(document).ready(function(){
     })
     
     
+    switch(path){
+        case '/FitnessToday/index.html':
+            console.log('Index page');
+            break;
+        case '/FitnessToday/user.html':
+            console.log('User page');
+            break;
+        case '/FitnessToday/profile.html':
+            console.log('Profile page');
+            break;
+        default:
+            console.log('testing page');
+            
+    }
+    
 })
