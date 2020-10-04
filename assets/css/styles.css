@@ -27,15 +27,15 @@
 .aside .profileName {
   margin-top: 50px;
   width: 200px;
+  color: #41a8bf;
 }
 
 .col.mainContainer {
-  margin-top: 60px;
   padding: 0 50px;
 }
 
 .profileImage {
-  background: #efefef;
+  /*background: #efefef;*/
   height: 200px;
   width: 200px;
   border-radius: 10px;
@@ -44,7 +44,6 @@
 .profileImage img {
   object-fit: contain;
   width: 200px;
-  border: 1px solid #efefef;
   border-radius: 10px;
 }
 
@@ -53,6 +52,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  position: relative;
 }
 
 .user-card {
@@ -138,5 +138,44 @@
   .container, .container-lg, .container-md, .container-sm, .container-xl {
     max-width: 1300px;
   }
+}
+
+.showDate {
+}
+
+.col.myItems {
+  margin-top: 60px;
+}
+
+.profileImage.notitle {
+  margin-top: 55px;
+}
+
+.modal-dialog-scrollable .modal-body img {
+  width: 19%;
+  padding: 2%;
+}
+
+.modal-dialog-scrollable .modal-body img:hover {
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  border-radius: 20px;
+}
+
+.modal {
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.card-body img {
+  position: absolute;
+  width: 70px;
+  top: 15px;
 }
 

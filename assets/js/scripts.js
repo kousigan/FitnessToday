@@ -1,5 +1,4 @@
-
-
+ 
 function applyRedirect(){
     const cards = document.querySelectorAll(".minimal")
     for (const card of cards) {
@@ -20,9 +19,16 @@ function CreateLiveCard(doc){
         var h4 = document.createElement('h4');
         var completion = document.createElement('div');
         var span = document.createElement('span');
-        
+        var img = document.createElement('img');
+    
         userCard.classList.add('col-md-4','user-card');
         cardMinimal.classList.add('card','minimal');
+        if(doc.data().pic==''){
+            img.setAttribute('src','https://firebasestorage.googleapis.com/v0/b/simpledb-fc1f7.appspot.com/o/avatar%2Fkawaii%2F027-boy-8.svg?alt=media&token=d4cae482-de77-4099-8173-cf0867ff98c3');
+        }
+        else{
+            img.setAttribute('src',doc.data().pic);
+        }
         cardMinimal.setAttribute('key',doc.id)
         cardBody.classList.add('card-body');
         h4.classList.add('card-title');
@@ -30,12 +36,14 @@ function CreateLiveCard(doc){
         
         span.appendChild(document.createTextNode(doc.data().completion))
         completion.appendChild(span);
+        cardBody.appendChild(img);
         cardBody.appendChild(h4);
         cardBody.appendChild(completion);
         h4.appendChild(document.createTextNode(doc.data().first));
         cardMinimal.appendChild(cardBody);
         userCard.appendChild(cardMinimal);
         var insertCard = document.getElementById('cardsContainer').appendChild(userCard);
+        
     return;
 }
 

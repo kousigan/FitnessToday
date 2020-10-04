@@ -79,7 +79,7 @@
   height: 100px;
   background: #3c3c3c;
   color: #fff;
-  border-radius: 50%;
+  border-radius: 10%;
   font-size: 36px;
 }
 
@@ -144,5 +144,40 @@
 
 .completion:after {
   content: "%";
+}
+
+.h3, h3 {
+  margin-top: 50px;
+  color: #86a7af;
+  margin-bottom: 30px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.nav-item {
+  align-items: center;
+  display: flex;
+}
+
+.alert.alert-success {
+  display: none;
+}
+
+.alert.alert-warning {
+  display: none;
+}
+
+.alert.alert-success.success {
+  display: block;
+}
+
+.alert.alert-warning.error {
+  display: block;
+}
+
+#contentEditable[aria-editable="false"] .btn-group, #contentEditable[aria-editable="false"] .actions {
+  display: none;
 }
 
