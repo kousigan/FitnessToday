@@ -340,7 +340,7 @@ $(document).ready(function(){
     let path = window.location.pathname;
     console.log(path);
     if(path=="/FitnessToday/"){
-        window.open('/index.html','_self');
+        window.open('/FitnessToday/index.html','_self');
     }
     let temp = localStorage.getItem('FTuser');
     let FTuser;
