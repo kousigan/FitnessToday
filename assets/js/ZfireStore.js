@@ -77,7 +77,9 @@ function AddNewUser(first_,last_,group_,uid_){
           setTimeout(()=>{
               $('.alert-success').removeClass('success').html('');
               $('input').val('');
+              location.reload();
           },5000);
+        
     })
     .catch(function(error) {
         console.error("Error adding document: ", error);
@@ -359,21 +361,21 @@ $(document).ready(function(){
     // console.log( arr[1],window.location.pathname)
 
     if(path=="/FitnessToday/update.html"){
-          UpdatePlan(arr[1]);
+//           UpdatePlan(arr[1]);
     }
 
     if(path=="/FitnessToday/user.html"){
-          GetUserData(arr[1],FTuser[0]);
+//           GetUserData(arr[1],FTuser[0]);
     }
 
     if(path=="/FitnessToday/index.html"){
-             CreateCards();
-        console.log('checking status..');
+//              CreateCards();
+//         console.log('checking status..');
         // signedInDetails();
      }
     
     if(path=="/FitnessToday/profile.html"){
-        GetProfileDetails();
+//         GetProfileDetails();
     }
     
    
@@ -388,15 +390,22 @@ $(document).ready(function(){
     switch(path){
         case '/FitnessToday/index.html':
             console.log('Index page');
+             CreateCards();
             break;
         case '/FitnessToday/user.html':
             console.log('User page');
+            GetUserData(arr[1],FTuser[0]);
             break;
         case '/FitnessToday/profile.html':
             console.log('Profile page');
+            GetProfileDetails();
+            break;
+        case '/FitnessToday/update.html':
+            console.log('Update page');
+            UpdatePlan(arr[1]);
             break;
         default:
-            console.log('testing page');
+            console.log('Login or Register to use the app.');
             
     }
     
