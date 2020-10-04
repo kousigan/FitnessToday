@@ -134,7 +134,6 @@ function CreateCards(){
         CreateLiveCard(doc);
         applyRedirect();
         });
-        break;
     });
 }
 //____________________________________ get User data
@@ -391,19 +390,19 @@ $(document).ready(function(){
     switch(path){
         case '/FitnessToday/index.html':
             console.log('Index page');
-             CreateCards();
-            
+//              CreateCards();
+            break;
         case '/FitnessToday/user.html':
             console.log('User page');
-            GetUserData(arr[1],FTuser[0]);
+//             GetUserData(arr[1],FTuser[0]);
             break;
         case '/FitnessToday/profile.html':
             console.log('Profile page');
-            GetProfileDetails();
+//             GetProfileDetails();
             break;
         case '/FitnessToday/update.html':
             console.log('Update page');
-            UpdatePlan(arr[1]);
+//             UpdatePlan(arr[1]);
             break;
         default:
             console.log('Login or Register to use the app.');
