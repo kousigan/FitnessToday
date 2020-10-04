@@ -349,6 +349,7 @@ $(document).ready(function(){
         pageVerification(FTuser,path);
     }
     if(FTuser==null||undefined){
+        console.log('nothing here');
          if(path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
             
         }      else{
