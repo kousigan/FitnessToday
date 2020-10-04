@@ -181,7 +181,7 @@ function ClearContents(){
 }
 
 function goBackToUser(){
-    window.open("user.html?uid="+ loggedId ,"_self");
+    window.open("FitnessToday/user.html?uid="+ loggedId ,"_self");
 }
 
 function applyDel(){
@@ -340,7 +340,7 @@ $(document).ready(function(){
     let path = window.location.pathname;
     
     if(path=="/"){
-        window.open('/index.html','_self');
+        window.open('/FitnessToday/index.html','_self');
     }
     let temp = localStorage.getItem('FTuser');
     let FTuser;
@@ -349,31 +349,31 @@ $(document).ready(function(){
         pageVerification(FTuser,path);
     }
     if(!FTuser){
-         if(path=='/login.html'||'/register.html'){
+         if(path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
             
         }      else{
-                    window.open('/login.html','_self');
+                    window.open('FitnessToday/login.html','_self');
 
         }
          
     }
     // console.log( arr[1],window.location.pathname)
 
-    if(path=="/update.html"){
+    if(path=="/FitnessToday/update.html"){
           UpdatePlan(arr[1]);
     }
 
-    if(path=="/user.html"){
+    if(path=="/FitnessToday/user.html"){
           GetUserData(arr[1],FTuser[0]);
     }
 
-    if(path=="/index.html"){
+    if(path=="/FitnessToday/index.html"){
              CreateCards();
         console.log('checking status..');
         // signedInDetails();
      }
     
-    if(path=="/profile.html"){
+    if(path=="/FitnessToday/profile.html"){
         GetProfileDetails();
     }
     
