@@ -5,7 +5,7 @@ function applyRedirect(){
       card.addEventListener('click', function(event) {
 
         myu = card.getAttribute('key');
-        window.open("FitnessToday/user.html?uid="+ myu ,"_self");
+        window.open("/user.html?uid="+ myu ,"_self");
 
 
       })
