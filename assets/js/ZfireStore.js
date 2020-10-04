@@ -349,17 +349,17 @@ $(document).ready(function(){
         pageVerification(FTuser,path);
     }
     if(!FTuser){
-         if(path=='FitnessToday/login.html'||'FitnessToday/register.html'){
+         if(path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
             
         }      else{
-                    window.open('FitnessToday/login.html','_self');
+                    window.open('/FitnessToday/login.html','_self');
 
         }
          
     }
     // console.log( arr[1],window.location.pathname)
 
-    if(path=="FitnessToday/update.html"){
+    if(path=="/FitnessToday/update.html"){
           UpdatePlan(arr[1]);
     }
 
@@ -373,7 +373,7 @@ $(document).ready(function(){
         // signedInDetails();
      }
     
-    if(path=="FitnessToday/profile.html"){
+    if(path=="/FitnessToday/profile.html"){
         GetProfileDetails();
     }
     
