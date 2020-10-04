@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
 </head>
 
 <body style="font-family: 'Noto Sans', sans-serif;">
@@ -27,9 +29,10 @@
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item" role="presentation" style="align-items: center;display: flex;"><span id="showDate"></span></li>
+                        <li class="nav-item" style="align-items: center;display: flex;"><span id="showDate"></span></li>
+                        <li class="nav-item userNameWelcome"><span class="welcome">Welcome&nbsp;</span><span class="userName">User</span></li>
                         <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="la la-user"></i></a>
-                            <div class="dropdown-menu text-left" role="menu"><a class="dropdown-item" role="presentation" href="#">Profile</a><a class="dropdown-item" role="presentation" href="#">Logout</a></div>
+                            <div class="dropdown-menu text-left"><a class="dropdown-item" href="profile.html">Profile</a><a class="dropdown-item logout" href="#">Logout</a></div>
                         </li>
                     </ul>
                 </div>
@@ -40,8 +43,8 @@
         <div class="container wrapper">
             <div class="row">
                 <div class="col aside">
-                    <h1 id="profileName" class="profileName" style="font-weight: bold;"></h1>
-                    <div class="profileImage"><img class="profile" src="assets/img/businessman-profile-cartoon_18591-58479.jpg"></div>
+                    <h3 id="profileName" class="profileName"></h3>
+                    <div class="profileImage"><img class="profile" src="https://firebasestorage.googleapis.com/v0/b/simpledb-fc1f7.appspot.com/o/avatar%2Fkawaii%2F027-boy-8.svg?alt=media&amp;token=d4cae482-de77-4099-8173-cf0867ff98c3"></div>
                 </div>
                 <div class="col main">
                     <div class="row">
@@ -49,7 +52,7 @@
                             <h3>Today's accomplishment</h3>
                             <div class="row">
                                 <div class="col completionBlock"><span id="comlpetionValue">0</span></div>
-                                <div class="col">
+                                <div id="contentEditable" class="col currentPlan" aria-editable="false">
                                     <ul class="list-group todayPlanContainer">
                                         <li class="list-group-item hidden"><span class="status inprogress"><i class="la la-ellipsis-h"></i><i class="la la-thumbs-up"></i></span><span class="planName">Name</span><span>Metric</span><span class="count"><span>1</span>/<span>2</span></span>
                                             <div
@@ -75,6 +78,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/scripts.js"></script>
     <script src="assets/js/ZfireStore.js"></script>
+    <script src="assets/js/Zgauth.js"></script>
 </body>
 
 </html>

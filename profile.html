@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>FitnessToday</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/android-icon-192x192.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/fonts/line-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+</head>
+
+<body style="font-family: 'Noto Sans', sans-serif;">
+    <div class="container-fluid page">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href="index.html">Fitness Today</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <form
+                    class="form-inline" style="display: none;">
+                    <div class="form-group" for="firstname"><input class="form-control form-group" type="text" name="firstname" placeholder="firstname"></div>
+                    <div class="form-group" for="lastname"><input class="form-control form-group" type="text" name="lastname" placeholder="lastname"></div>
+                    <div class="form-group"><button class="btn btn-primary" type="button" onclick="AddNewUser(firstname.value,lastname.value)">Button</button></div>
+                    </form>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item userNameWelcome"><span class="welcome">Welcome&nbsp;</span><span class="userName">User</span></li>
+                            <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><i class="la la-user"></i></a>
+                                <div class="dropdown-menu text-left"><a class="dropdown-item hidden" href="#">Profile</a><a class="dropdown-item logout" id="logout" href="#">Logout</a></div>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </nav>
+    </div>
+    <div>
+        <div class="container wrapper">
+            <div class="row">
+                <div class="col-md-6 aside">
+                    <div class="profileImage notitle"><img class="profile" src="https://firebasestorage.googleapis.com/v0/b/simpledb-fc1f7.appspot.com/o/avatar%2Fkawaii%2F027-boy-8.svg?alt=media&amp;token=d4cae482-de77-4099-8173-cf0867ff98c3"></div><a class="btn btn-sm changeAvatar" role="button"
+                        data-toggle="modal" data-target="">Change avatar</a>
+                    <div class="modal fade" role="dialog" tabindex="-1" id="avatarBox">
+                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3>Update avatar</h3><button type="button" class="close hidden" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                                <div class="modal-body"></div>
+                                <div class="modal-footer" style="justify-content: space-between;">
+                                    <p class="text-info d-xl-flex align-items-xl-center"><i class="la la-info-circle"></i>Click on image to update avatar</p><button class="btn btn-light closeModal" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary hidden" type="button">Update now</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col mainContainer">
+                    <h3>Update profile</h3>
+                    <div class="alert alert-success" role="alert"><span><strong>Alert</strong> text.</span></div>
+                    <div class="alert alert-warning" role="alert"><span><strong>Alert</strong> text.</span></div>
+                    <form class="updateProfile">
+                        <div class="form-group"><label>First name</label><input class="form-control" type="text" name="firstname"></div>
+                        <div class="form-group"><label>Last name</label><input class="form-control" type="text" name="lastname"></div>
+                        <div class="form-group"><label>Email</label><input class="form-control" type="text" name="email"></div>
+                        <div class="form-group"><label>Group</label><select class="form-control" name="group"><optgroup label="Default groups"><option value="1">Group 1</option></optgroup></select></div>
+                        <div class="form-group"><label>uid</label><input class="form-control" type="text" name="uid" readonly=""></div>
+                        <div class="form-group text-right"><button class="btn btn-dark" type="button" onclick="UpdateFromProfile(firstname.value,lastname.value,group.value,uid.value)">Update profile</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/ZfireStore.js"></script>
+    <script src="assets/js/Zgauth.js"></script>
+</body>
+
+</html>
