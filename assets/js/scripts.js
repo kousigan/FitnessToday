@@ -5,7 +5,7 @@ function applyRedirect(){
       card.addEventListener('click', function(event) {
 
         myu = card.getAttribute('key');
-        window.open("user.html?uid="+ myu ,"_self");
+        window.open("FitnessToday/user.html?uid="+ myu ,"_self");
 
 
       })
@@ -52,7 +52,7 @@ function updateRedirect(){
     
     Update.addEventListener('click',(event)=>{
         myu = Update.getAttribute('key');
-        window.open("update.html?uid="+ myu ,"_self");
+        window.open("FitnessToday/update.html?uid="+ myu ,"_self");
     })
  }
 function TodayList(list){
