@@ -320,12 +320,12 @@ function setUserName(FTuser){
 
 function pageVerification(FTuser,path){
    
-        if(path!=='/login.html'||'/register.html'){
+        if(path!=='FitnessToday/login.html'||'FitnessToday/register.html'){
             console.log(FTuser[0])
             setUserName(FTuser);
           
         } else{
-              window.open('/index.html','_self');
+              window.open('FitnessToday/index.html','_self');
         }
        
     
@@ -339,8 +339,8 @@ $(document).ready(function(){
     let arr = window.location.search.split('=');
     let path = window.location.pathname;
     
-    if(path=="/"){
-        window.open('/FitnessToday/index.html','_self');
+    if(path=="/FitnessToday"){
+        window.open('FitnessToday/index.html','_self');
     }
     let temp = localStorage.getItem('FTuser');
     let FTuser;
@@ -349,7 +349,7 @@ $(document).ready(function(){
         pageVerification(FTuser,path);
     }
     if(!FTuser){
-         if(path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
+         if(path=='FitnessToday/login.html'||'FitnessToday/register.html'){
             
         }      else{
                     window.open('FitnessToday/login.html','_self');
@@ -359,21 +359,21 @@ $(document).ready(function(){
     }
     // console.log( arr[1],window.location.pathname)
 
-    if(path=="/FitnessToday/update.html"){
+    if(path=="FitnessToday/update.html"){
           UpdatePlan(arr[1]);
     }
 
-    if(path=="/FitnessToday/user.html"){
+    if(path=="FitnessToday/user.html"){
           GetUserData(arr[1],FTuser[0]);
     }
 
-    if(path=="/FitnessToday/index.html"){
+    if(path=="FitnessToday/index.html"){
              CreateCards();
         console.log('checking status..');
         // signedInDetails();
      }
     
-    if(path=="/FitnessToday/profile.html"){
+    if(path=="FitnessToday/profile.html"){
         GetProfileDetails();
     }
     
