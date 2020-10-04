@@ -348,7 +348,7 @@ $(document).ready(function(){
         FTuser = temp.split(',');
         pageVerification(FTuser,path);
     }
-    if(!temp){
+    if(FTuser==null||undefined){
          if(path=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
             
         }      else{
