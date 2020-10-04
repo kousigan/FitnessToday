@@ -350,7 +350,9 @@ $(document).ready(function(){
     }
     if(FTuser==null||undefined){
         console.log('nothing here');
-        if(path!=='/FitnessToday/login.html'||'/FitnessToday/register.html'){
+        if(path=='/FitnessToday/login.html'||path=='/FitnessToday/register.html'){
+        }
+        else{
             window.open('/FitnessToday/login.html','_self')
         }
     }
