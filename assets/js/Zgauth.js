@@ -28,7 +28,7 @@ function SignInUser(email,password){
       console.log(data.user.uid,data.user.email)
       localStorage.setItem('FTuser',[data.user.uid,data.user.email]);
        setTimeout(function(){
-          window.open('/index.html','_self');
+          window.open('/FitnessToday/index.html','_self');
       }, 3000);
   }).catch(function(error) {
     // Handle Errors here.
