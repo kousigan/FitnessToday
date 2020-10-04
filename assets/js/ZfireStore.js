@@ -338,7 +338,7 @@ $(document).ready(function(){
 
     let arr = window.location.search.split('=');
     let path = window.location.pathname;
-    
+    console.log(path);
     if(path=="/FitnessToday"){
         window.open('FitnessToday/index.html','_self');
     }
