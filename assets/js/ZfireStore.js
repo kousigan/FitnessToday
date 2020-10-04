@@ -183,7 +183,7 @@ function ClearContents(){
 }
 
 function goBackToUser(){
-    window.open("FitnessToday/user.html?uid="+ loggedId ,"_self");
+    window.open("/FitnessToday/user.html?uid="+ loggedId ,"_self");
 }
 
 function applyDel(){
