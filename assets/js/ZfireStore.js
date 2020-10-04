@@ -37,7 +37,7 @@ listRef.listAll().then(function(result){
 });
 }
 
-let chosenPic;
+var chosenPic;
 
 function setTempImg(val){
     chosenPic=val;
@@ -56,7 +56,7 @@ $('.closeModal').on('click',function(){
 
  
 //--------------------------Firestore config
-let loggedId;
+var loggedId;
 
 
 //__________________________Add new user
@@ -343,7 +343,7 @@ $(document).ready(function(){
         window.open('/FitnessToday/index.html','_self');
     }
     let temp = localStorage.getItem('FTuser');
-    let FTuser;
+    var FTuser;
     if (temp){
         FTuser = temp.split(',');
         pageVerification(FTuser,path);
