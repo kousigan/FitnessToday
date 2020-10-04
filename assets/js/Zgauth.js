@@ -75,7 +75,7 @@ firebase.auth().signOut().then(function(data) {
   console.log(data,'User Logged Out!');
     localStorage.removeItem('FTuser');
       setTimeout(function(){
-          window.open('FitnessToday/login.html','_self');
+          window.open('/FitnessToday/login.html','_self');
       }, 3000);
 }).catch(function(error) {
   // An error happened.
