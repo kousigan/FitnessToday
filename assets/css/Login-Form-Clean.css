@@ -35,18 +35,19 @@
 }
 
 .login-clean form .btn-primary {
-  background: #f4476b;
+ background: #41a8bf;
   border: none;
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 11px;
   box-shadow: none;
   margin-top: 26px;
   text-shadow: none;
   outline: none !important;
+  box-shadow: 0 4px 4px rgba(65, 168, 191, 0.4);
 }
 
 .login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
-  background: #eb3b60;
+  background: #3a94a9;
 }
 
 .login-clean form .btn-primary:active {
